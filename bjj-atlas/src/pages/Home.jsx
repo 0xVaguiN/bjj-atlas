@@ -1,4 +1,7 @@
 import { Link, Links } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserPlus, faCirclePlay, faStar } from '@fortawesome/free-solid-svg-icons'
+
 
 export default function Home() {
   return (
@@ -46,8 +49,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative h-screen flex justify-center font-display text-center">
-        <div className="relative z-10 px-4 py-25">
+      <section className="relative h-screen flex flex-col justify-center font-display text-center">
+        <div className="relative z-10 mt-30 px-4 py-2">
           <span className="text-sm font-bold text-red-600 bg-red-500/20 px-5 py-2 rounded-full backdrop-blur-sm">
             COMO FUNCIONA
           </span>
@@ -58,9 +61,24 @@ export default function Home() {
             Três passos simples para começar a evoluir suas habilidades
           </p>
         </div>
-        <div>
+        <div className="relative flex justify-center flex-row mt-10 px-4 gap-15">
           <div>
-            <h1>card</h1>
+            <h1 className="absolute text-center text-white font-bold text-2xl w-15 py-3.5 ml-7.5 rounded-xl bg-red-500">1</h1>
+            <div className="w-75 h-65 mt-7.5 bg-[#FFFAFA] border border-[#C6C6C6] rounded-2xl">
+              <h1><FontAwesomeIcon icon={faUserPlus} className="text-[#f40000] text-3xl bg-[#FFDDDD] rounded-xl px-3 py-4" /></h1>
+            </div>
+          </div>
+          <div>
+            <h1 className="absolute text-center text-white font-bold text-2xl w-15 py-3.5 ml-7.5 rounded-xl bg-blue-500">2</h1>
+            <div className="w-75 h-65 mt-7.5 bg-[#FFFAFA] border border-[#C6C6C6] rounded-2xl">
+              <h1><FontAwesomeIcon icon={faCirclePlay} className="text-[#3535ff] text-3xl bg-[#D1D7F9] rounded-xl px-3 py-4" /></h1>
+            </div>
+          </div>
+          <div>
+            <h1 className="absolute text-center text-white font-bold text-2xl w-15 py-3.5 ml-7.5 rounded-xl bg-purple-500">3</h1>
+            <div className="w-75 h-65 mt-7.5 bg-[#FFFAFA] border border-[#C6C6C6] rounded-2xl">
+              <h1><FontAwesomeIcon icon={faStar} className="text-[#792CF5] text-3xl bg-[#D6BBF9] rounded-xl px-3 py-4" /></h1>
+            </div>
           </div>
         </div>
       </section>
