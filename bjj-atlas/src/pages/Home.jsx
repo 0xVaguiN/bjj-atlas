@@ -64,27 +64,34 @@ export default function Home() {
         <div className="relative flex justify-center flex-row mt-10 px-4 gap-15">
           <div>
             <h1 className="absolute text-center text-white font-bold text-2xl w-15 py-3.5 ml-7.5 rounded-xl bg-red-500">1</h1>
-            <div className="w-75 h-65 mt-7.5 bg-[#FFFAFA] border border-[#C6C6C6] rounded-2xl">
-              <h1><FontAwesomeIcon icon={faUserPlus} className="text-[#eb1717] text-3xl bg-[#FFDDDD] mt-9.5 rounded-xl px-3 py-4" /></h1>
-              <h1 className="mt-4 px-3 font-bold text-xl"> Crie sua Conta e Escolha sua Faixa</h1>
+            <div className="w-75 h-65 mt-7.5 bg-[#FFFAFA] border border-[#C6C6C6] shadow-lg rounded-2xl">
+              <h1><FontAwesomeIcon icon={faUserPlus} className="text-[#eb1717] text-3xl bg-[#FFDDDD] mt-8.5 rounded-xl px-3 py-4" /></h1>
+              <h1 className="mt-4 px-3 font-bold text-xl">Crie sua Conta e Escolha sua Faixa</h1>
+              <h2 className="mt-2 px-3 text-stone-600 text-sm font-semibold">Cadastre-se gratuitamente e informe sua graduação atual. O sistema liberará técnicas adequadas ao seu nível.</h2>
             </div>
           </div>
           <div>
             <h1 className="absolute text-center text-white font-bold text-2xl w-15 py-3.5 ml-7.5 rounded-xl bg-blue-500">2</h1>
-            <div className="w-75 h-65 mt-7.5 bg-[#FFFAFA] border border-[#C6C6C6] rounded-2xl">
-              <h1><FontAwesomeIcon icon={faCirclePlay} className="text-[#3535ff] text-3xl bg-[#D1D7F9] mt-9.5 rounded-xl px-3 py-4" /></h1>
-              <h1 className="mt-4 px-3 font-bold text-xl"> Crie sua Conta e Escolha sua Faixa</h1>
+            <div className="w-75 h-65 mt-7.5 bg-[#FFFAFA] border border-[#C6C6C6] shadow-lg rounded-2xl">
+              <h1><FontAwesomeIcon icon={faCirclePlay} className="text-[#3535ff] text-3xl bg-[#D1D7F9] mt-8.5 rounded-xl px-3 py-4" /></h1>
+              <h1 className="mt-4 px-3 font-bold text-xl">Explore Técnicas com Imagens e Vídeos</h1>
+              <h2 className="mt-2 px-3 text-stone-600 text-sm font-semibold">Assista vídeos detalhados de cada técnica, com explicações passo a passo e demonstrações práticas.</h2>
             </div>
           </div>
           <div>
             <h1 className="absolute text-center text-white font-bold text-2xl w-15 py-3.5 ml-7.5 rounded-xl bg-purple-500">3</h1>
-            <div className="w-75 h-65 mt-7.5 bg-[#FFFAFA] border border-[#C6C6C6] rounded-2xl">
-              <h1><FontAwesomeIcon icon={faStar} className="text-[#792CF5] text-3xl bg-[#D6BBF9] mt-9.5 rounded-xl px-3 py-4" /></h1>
-              <h1 className="mt-4 px-3 font-bold text-xl"> Crie sua Conta e Escolha sua Faixa</h1>
+            <div className="w-75 h-65 mt-7.5 bg-[#FFFAFA] border border-[#C6C6C6] shadow-lg rounded-2xl">
+              <h1><FontAwesomeIcon icon={faStar} className="text-[#792CF5] text-3xl bg-[#D6BBF9] mt-8.5 rounded-xl px-3 py-4" /></h1>
+              <h1 className="mt-4 px-3 font-bold text-xl">Salve suas Favoritas e Acompanhe seu Progresso</h1>
+              <h2 className="mt-2 px-3 text-stone-600 text-sm font-semibold">Marque suas técnicas favoritas e monitore sua evolução conforme avança nas graduações.</h2>
             </div>
           </div>
         </div>
       </section>
+      <hr className="mt-35 mx-15.5 text-gray-400 border"/>
+      <footer className="flex font-medium text-sm text-gray-600 justify-center p-4">
+      <h1>© 2024 BJJ Atlas. Todos os direitos reservados.</h1>
+      </footer>
     </>
-  );
+  )
 }
