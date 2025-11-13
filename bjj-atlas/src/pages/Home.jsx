@@ -65,19 +65,22 @@ export default function Home() {
           <div>
             <h1 className="absolute text-center text-white font-bold text-2xl w-15 py-3.5 ml-7.5 rounded-xl bg-red-500">1</h1>
             <div className="w-75 h-65 mt-7.5 bg-[#FFFAFA] border border-[#C6C6C6] rounded-2xl">
-              <h1><FontAwesomeIcon icon={faUserPlus} className="text-[#f40000] text-3xl bg-[#FFDDDD] rounded-xl px-3 py-4" /></h1>
+              <h1><FontAwesomeIcon icon={faUserPlus} className="text-[#eb1717] text-3xl bg-[#FFDDDD] mt-9.5 rounded-xl px-3 py-4" /></h1>
+              <h1 className="mt-4 px-3 font-bold text-xl"> Crie sua Conta e Escolha sua Faixa</h1>
             </div>
           </div>
           <div>
             <h1 className="absolute text-center text-white font-bold text-2xl w-15 py-3.5 ml-7.5 rounded-xl bg-blue-500">2</h1>
             <div className="w-75 h-65 mt-7.5 bg-[#FFFAFA] border border-[#C6C6C6] rounded-2xl">
-              <h1><FontAwesomeIcon icon={faCirclePlay} className="text-[#3535ff] text-3xl bg-[#D1D7F9] rounded-xl px-3 py-4" /></h1>
+              <h1><FontAwesomeIcon icon={faCirclePlay} className="text-[#3535ff] text-3xl bg-[#D1D7F9] mt-9.5 rounded-xl px-3 py-4" /></h1>
+              <h1 className="mt-4 px-3 font-bold text-xl"> Crie sua Conta e Escolha sua Faixa</h1>
             </div>
           </div>
           <div>
             <h1 className="absolute text-center text-white font-bold text-2xl w-15 py-3.5 ml-7.5 rounded-xl bg-purple-500">3</h1>
             <div className="w-75 h-65 mt-7.5 bg-[#FFFAFA] border border-[#C6C6C6] rounded-2xl">
-              <h1><FontAwesomeIcon icon={faStar} className="text-[#792CF5] text-3xl bg-[#D6BBF9] rounded-xl px-3 py-4" /></h1>
+              <h1><FontAwesomeIcon icon={faStar} className="text-[#792CF5] text-3xl bg-[#D6BBF9] mt-9.5 rounded-xl px-3 py-4" /></h1>
+              <h1 className="mt-4 px-3 font-bold text-xl"> Crie sua Conta e Escolha sua Faixa</h1>
             </div>
           </div>
         </div>
