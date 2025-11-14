@@ -7,9 +7,9 @@ export default function Techniques() {
   const beltOrder = ["branca", "azul", "roxa", "marrom", "preta"];
 
   return (
-    <div style={{ padding: 20 }}>
+    <div className="p-5">
       <h2>Técnicas</h2>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 20 }}>
+      <div className="grid grid-cols-[autofill_minmax(200px,1fr)] gap-5 ">
         {data.map((m) => {
           const locked = beltOrder.indexOf(user.faixa) < beltOrder.indexOf(m.belt);
           return (

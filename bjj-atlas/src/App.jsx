@@ -4,7 +4,7 @@ import Techniques from './pages/Techniques'
 import Technique from './pages/Technique'
 import Register from './pages/Register'
 //import Login from './pages/Login'
-//import Profile from './pages/Profile'
+import Profile from './pages/Profile'
 
 export default function App() {
   return (
@@ -18,6 +18,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/techniques" element={<Techniques />} />
         <Route path="/techniques/:id" element={<Technique />} />
       </Routes>

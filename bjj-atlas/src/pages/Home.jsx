@@ -5,7 +5,7 @@ import { faUserPlus, faCirclePlay, faStar } from '@fortawesome/free-solid-svg-ic
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-gray-50">
       <section className="relative h-screen flex items-center justify-center text-center font-display text-white">
         {/* Imagem de fundo */}
         <img
@@ -62,7 +62,7 @@ export default function Home() {
           </p>
         </div>
         <div className="relative flex justify-center flex-row mt-10 px-4 gap-15">
-          <div>
+          <div className="cursor-pointer hover:-translate-y-4.5 hover:-translate-x-2.5 transition-all duration-400 ease-in-out ">
             <h1 className="absolute text-center text-white font-bold text-2xl w-15 py-3.5 ml-7.5 rounded-xl bg-red-500">1</h1>
             <div className="w-75 h-65 mt-7.5 bg-[#FFFAFA] border border-[#C6C6C6] shadow-lg rounded-2xl">
               <h1><FontAwesomeIcon icon={faUserPlus} className="text-[#eb1717] text-3xl bg-[#FFDDDD] mt-8.5 rounded-xl px-3 py-4" /></h1>
@@ -70,7 +70,7 @@ export default function Home() {
               <h2 className="mt-2 px-3 text-stone-600 text-sm font-semibold">Cadastre-se gratuitamente e informe sua graduação atual. O sistema liberará técnicas adequadas ao seu nível.</h2>
             </div>
           </div>
-          <div>
+          <div className="cursor-pointer hover:-translate-y-4.5 hover:-translate-x-2.5 transition-all duration-400 ease-in-out ">
             <h1 className="absolute text-center text-white font-bold text-2xl w-15 py-3.5 ml-7.5 rounded-xl bg-blue-500">2</h1>
             <div className="w-75 h-65 mt-7.5 bg-[#FFFAFA] border border-[#C6C6C6] shadow-lg rounded-2xl">
               <h1><FontAwesomeIcon icon={faCirclePlay} className="text-[#3535ff] text-3xl bg-[#D1D7F9] mt-8.5 rounded-xl px-3 py-4" /></h1>
@@ -78,7 +78,7 @@ export default function Home() {
               <h2 className="mt-2 px-3 text-stone-600 text-sm font-semibold">Assista vídeos detalhados de cada técnica, com explicações passo a passo e demonstrações práticas.</h2>
             </div>
           </div>
-          <div>
+          <div className="cursor-pointer hover:-translate-y-4.5 hover:-translate-x-2.5 transition-all duration-400 ease-in-out ">
             <h1 className="absolute text-center text-white font-bold text-2xl w-15 py-3.5 ml-7.5 rounded-xl bg-purple-500">3</h1>
             <div className="w-75 h-65 mt-7.5 bg-[#FFFAFA] border border-[#C6C6C6] shadow-lg rounded-2xl">
               <h1><FontAwesomeIcon icon={faStar} className="text-[#792CF5] text-3xl bg-[#D6BBF9] mt-8.5 rounded-xl px-3 py-4" /></h1>
@@ -92,6 +92,6 @@ export default function Home() {
       <footer className="flex font-medium text-sm text-gray-600 justify-center p-4">
       <h1>© 2024 BJJ Atlas. Todos os direitos reservados.</h1>
       </footer>
-    </>
+    </div>
   )
 }
