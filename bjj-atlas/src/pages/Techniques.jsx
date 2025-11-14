@@ -7,7 +7,7 @@ export default function Techniques() {
   const beltOrder = ["branca", "azul", "roxa", "marrom", "preta"];
 
   const techniques = data.length
-
+  
   return (
     <div className="font-display p-5">
       <h1 className="font-semibold mt-3 text-2xl text-left">Arsenal de Técnicas</h1>
@@ -15,11 +15,11 @@ export default function Techniques() {
           Explore nossa coleção completa de técnicas de Jiu-Jitsu Brasileiro.
         </h3>
         <h6 className="mb-2 text-xs text-gray-600">Mostrando {techniques} técnicas</h6>
-      <div className="flex justify-start gap-8">
+      <div className="flex flex-wrap justify-start gap-8">
         {data.map((m) => {
           const locked = beltOrder.indexOf(user.faixa) < beltOrder.indexOf(m.belt);
           return (
-            <div key={m.id} className={`flex border-2 flex-col items-center py-5 px-5 mt-auto rounded-3xl border-[#C6C6C6] card ${locked ? "locked" : ""}`}>
+            <div key={m.id} className={`flex border-2 flex-col items-center py-5 px-5 mb-8 mt-auto rounded-3xl border-[#C6C6C6] card ${locked ? "locked" : ""}`}>
               <img src={m.image} alt={m.name_pt} className="w-full h-36 object-cover rounded-xl mb-3" />
               <h3>{m.name_pt}</h3>
               <p>Faixa mínima: {m.belt}</p>

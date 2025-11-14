@@ -34,5 +34,40 @@
     "video": "https://www.youtube.com/embed/yyyyy",
     "description_pt": "Golpe clássico de finalização no Jiu-Jitsu.",
     "steps": ["Segurar o braço", "Ajustar o quadril", "Finalizar"]
+  },
+  {
+    "id": 5,
+    "name_pt": "Guarda Delariva",
+    "belt": "branca",
+    "image": "/images/armlock.jpg",
+    "video": "https://www.youtube.com/embed/yyyyy",
+    "description_pt": "Golpe clássico de finalização no Jiu-Jitsu.",
+    "steps": ["Segurar o braço", "Ajustar o quadril", "Finalizar"]
+  },
+  {
+    "id": 6,
+    "name_pt": "Guarda Delariva",
+    "belt": "branca",
+    "image": "/images/armlock.jpg",
+    "video": "https://www.youtube.com/embed/yyyyy",
+    "description_pt": "Golpe clássico de finalização no Jiu-Jitsu.",
+    "steps": ["Segurar o braço", "Ajustar o quadril", "Finalizar"]
+  },
+  {
+    "id": 7,
+    "name_pt": "Guarda Delariva",
+    "belt": "branca",
+    "image": "/images/armlock.jpg",
+    "video": "https://www.youtube.com/embed/yyyyy",
+    "description_pt": "Golpe clássico de finalização no Jiu-Jitsu.",
+    "steps": ["Segurar o braço", "Ajustar o quadril", "Finalizar"]
+  },{
+    "id":8,
+    "name_pt": "Guarda Delariva",
+    "belt": "branca",
+    "image": "/images/armlock.jpg",
+    "video": "https://www.youtube.com/embed/yyyyy",
+    "description_pt": "Golpe clássico de finalização no Jiu-Jitsu.",
+    "steps": ["Segurar o braço", "Ajustar o quadril", "Finalizar"]
   }
 ]
