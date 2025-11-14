@@ -3,8 +3,10 @@ import data from "../data/moves.json";
 import { Link } from "react-router-dom";
 
 export default function Techniques() {
-  const user = JSON.parse(localStorage.getItem("user")) || { faixa: "branca" };
+  const user = JSON.parse(localStorage.getItem("user-bjj")) || { faixa: "branca" };
   const beltOrder = ["branca", "azul", "roxa", "marrom", "preta"];
+
+  const techniques = data.length
 
   return (
     <div className="font-display p-5">
@@ -12,7 +14,8 @@ export default function Techniques() {
       <h3 className="mb-8 text-gray-600">
           Explore nossa coleção completa de técnicas de Jiu-Jitsu Brasileiro.
         </h3>
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,2fr))] gap-8 ">
+        <h6 className="mb-2 text-xs text-gray-600">Mostrando {techniques} técnicas</h6>
+      <div className="flex justify-start gap-8">
         {data.map((m) => {
           const locked = beltOrder.indexOf(user.faixa) < beltOrder.indexOf(m.belt);
           return (
@@ -21,7 +24,7 @@ export default function Techniques() {
               <h3>{m.name_pt}</h3>
               <p>Faixa mínima: {m.belt}</p>
               {locked ? (
-                <p>🔒 Bloqueado</p>
+                <p className="py-2 px-15 mt-5 text-center text-white font-semibold border rounded-xl bg-[#777777]">🔒Bloqueado</p>
               ) : (
                 <Link className="py-2 px-17 mt-5 text-center text-white font-semibold border rounded-xl bg-[#d11e1eff]" to={`/techniques/${m.id}`}>Ver Técnica</Link>
               )}

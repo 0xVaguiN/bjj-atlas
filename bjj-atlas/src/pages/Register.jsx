@@ -20,7 +20,7 @@ export default function Register() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    localStorage.setItem("user", JSON.stringify(form));
+    localStorage.setItem("user-bjj", JSON.stringify(form));
     alert("Cadastro feito com sucesso!");
     setForm({ nome: "", email: "", idade: "", faixa: "branca" }); // limpa o formulário
   }
