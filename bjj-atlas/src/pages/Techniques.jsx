@@ -7,20 +7,23 @@ export default function Techniques() {
   const beltOrder = ["branca", "azul", "roxa", "marrom", "preta"];
 
   return (
-    <div className="p-5">
-      <h2>Técnicas</h2>
-      <div className="grid grid-cols-[autofill_minmax(200px,1fr)] gap-5 ">
+    <div className="font-display p-5">
+      <h1 className="font-semibold mt-3 text-2xl text-left">Arsenal de Técnicas</h1>
+      <h3 className="mb-8 text-gray-600">
+          Explore nossa coleção completa de técnicas de Jiu-Jitsu Brasileiro.
+        </h3>
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,2fr))] gap-8 ">
         {data.map((m) => {
           const locked = beltOrder.indexOf(user.faixa) < beltOrder.indexOf(m.belt);
           return (
-            <div key={m.id} className={`card ${locked ? "locked" : ""}`}>
-              <img src={m.image} alt={m.name_pt} width="100%" />
+            <div key={m.id} className={`flex border-2 flex-col items-center py-5 px-5 mt-auto rounded-3xl border-[#C6C6C6] card ${locked ? "locked" : ""}`}>
+              <img src={m.image} alt={m.name_pt} className="w-full h-36 object-cover rounded-xl mb-3" />
               <h3>{m.name_pt}</h3>
               <p>Faixa mínima: {m.belt}</p>
               {locked ? (
                 <p>🔒 Bloqueado</p>
               ) : (
-                <Link to={`/techniques/${m.id}`}>Ver Técnica</Link>
+                <Link className="py-2 px-17 mt-5 text-center text-white font-semibold border rounded-xl bg-[#d11e1eff]" to={`/techniques/${m.id}`}>Ver Técnica</Link>
               )}
             </div>
           );

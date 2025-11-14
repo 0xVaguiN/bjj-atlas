@@ -26,7 +26,7 @@ export default function Register() {
   }
 
   return (
-    <div className="flex items-center justify-start flex-col pt-5 min-h-screen">
+    <div className="flex items-center font-display justify-start flex-col pt-5 min-h-screen">
       <h1 className="text-5xl font-bold pt-10">BJJ Atlas</h1>
       <h3 className="mb-8 text-gray-600">
           Domine a arte suave
