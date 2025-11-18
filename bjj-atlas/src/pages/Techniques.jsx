@@ -22,7 +22,7 @@ export default function Techniques() {
             <div key={m.id} className={`flex border-2 flex-col items-left pt-5 mb-8 mt-auto rounded-xl border-[#C6C6C6] card ${locked ? "locked" : ""}`}>
               <img src={m.image} alt={m.name_pt} className="w-72 h-50 object-fill rounded-t-xl mb-3" />
               <h3 className="pt-4 px-5 font-bold text-xl">{m.name_pt}</h3>
-              <p>{m.description_pt}</p>
+              <p className="pt-1 px-5 text-gray-500 text-xs">{m.description_pt}</p>
               {locked ? (
                 <p className="py-2 px-15 mt-5 text-center text-white font-semibold border rounded-xl bg-[#777777]">🔒Bloqueado</p>
               ) : (
