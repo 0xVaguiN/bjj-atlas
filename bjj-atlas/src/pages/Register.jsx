@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Register() {
   const [form, setForm] = useState({
     nome: "",
     email: "",
+    senha: "",
     idade: "",
     faixa: "",
   });
@@ -22,7 +24,7 @@ export default function Register() {
     e.preventDefault();
     localStorage.setItem("user-bjj", JSON.stringify(form));
     alert("Cadastro feito com sucesso!");
-    setForm({ nome: "", email: "", idade: "", faixa: "branca" }); // limpa o formulário
+    setForm({ nome: "", email: "", senha: "", idade: "", faixa: "branca" }); // limpa o formulário
   }
 
   return (
@@ -80,6 +82,26 @@ export default function Register() {
                peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:-translate-y-1/2 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-gray-500"
             >
               E-mail
+            </label>
+          </div>
+          <div className="relative w-full">
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder=" "
+              value={form.senha}
+              onChange={handleChange}
+              className="peer w-full border-2 border-gray-300 rounded-xl bg-transparent mb-3 px-3 py-2.5 text-gray-800 focus:border-[#d11e1eff] focus:shadow-sm focus:outline-none"
+            />
+            <label
+              htmlFor="senha"
+              className="absolute left-3 top-20 -translate-y-2/2 text-gray-500 text-base bg-[#FFFAFA] px-1 transition-all duration-200 ease-in-out
+               peer-placeholder-shown:top-5.5 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-gray-500 peer-placeholder-shown:text-base
+               peer-focus:top-0 peer-focus:-translate-y-1/2 peer-focus:text-sm peer-focus:text-[#d11e1eff]
+               peer-not-placeholder-shown:top-0 peer-not-placeholder-shown:-translate-y-1/2 peer-not-placeholder-shown:text-sm peer-not-placeholder-shown:text-gray-500"
+            >
+              Senha
             </label>
           </div>
           <div className="relative w-full">
@@ -142,6 +164,7 @@ export default function Register() {
           >
             Cadastrar
           </button>
+          <h1 className="text-[14px]">Já tem conta? <Link className="underline text-red-500" to="/login">Fazer Login!</Link></h1>
         </form>
       </div>
     </div>

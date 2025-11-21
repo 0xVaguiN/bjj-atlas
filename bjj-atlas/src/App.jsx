@@ -3,7 +3,7 @@ import Home from './pages/Home'
 import Techniques from './pages/Techniques'
 import Technique from './pages/Technique'
 import Register from './pages/Register'
-//import Login from './pages/Login'
+import Login from './pages/Login'
 import Profile from './pages/Profile'
 
 export default function App() {
@@ -17,6 +17,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/techniques" element={<Techniques />} />

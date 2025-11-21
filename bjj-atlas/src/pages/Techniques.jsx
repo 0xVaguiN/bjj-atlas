@@ -2,6 +2,7 @@
 import data from "../data/moves.json";
 import { Link } from "react-router-dom";
 
+
 export default function Techniques() {
   const user = JSON.parse(localStorage.getItem("user-bjj")) || {
     faixa: "branca",
@@ -11,7 +12,7 @@ export default function Techniques() {
   const techniques = data.length;
 
   return (
-    <div className="font-display p-5">
+    <div className="flex flex-col flex-wrap font-display p-5">
       <h1 className="font-semibold mt-3 text-2xl text-left">
         Arsenal de Técnicas
       </h1>
@@ -22,7 +23,6 @@ export default function Techniques() {
         Mostrando {techniques} técnicas
       </h6>
 
-      {/* AQUI ENTRA O NOVO GRID DOS CARDS */}
       <div className="flex flex-wrap justify-center mt-1 gap-10 px-2">
         {data.map((m) => {
           const locked =
@@ -35,7 +35,6 @@ export default function Techniques() {
                 locked ? "opacity-70" : ""
               }`}
             >
-              {/* Imagem */}
               <div className="h-44 w-full overflow-hidden">
                 <img
                   src={m.image}
@@ -44,12 +43,14 @@ export default function Techniques() {
                 />
               </div>
 
-              <div className="p-5">
+              <div className="flex flex-col p-5">
                 <h3 className="font-bold text-xl mb-1">{m.name_pt}</h3>
 
                 <p className="text-gray-500 text-sm line-clamp-2 mb-4">
                   {m.description_pt}
                 </p>
+
+                <span className="border-2 text-xs font-semibold bg-white border-[#C6C6C6] w-fit px-3 py-1 mb-4 rounded-full">Faixa {m.belt}</span>
 
                 {locked ? (
                   <button
