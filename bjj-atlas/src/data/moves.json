@@ -5,7 +5,7 @@
     "belt": "branca",
     "image": "../../public/montada.webp",
     "video": "https://www.youtube.com/embed/xxxxx",
-    "description_pt": "Uma das posições mais dominantes do Jiu-Jitsu.",
+    "description_pt": "Uma das posições mais dominantes do Jiu-Jitsu. Golpe clássico de finalização no Jiu-Jitsu.Golpe clássico de finalização no Jiu-Jitsu.Golpe clássico de finalização no Jiu-Jitsu.Golpe clássico de finalização no Jiu-Jitsu.Golpe clássico de finalização no Jiu-Jitsu.Golpe clássico de finalização no Jiu-Jitsu.Golpe clássico de finalização no Jiu-Jitsu.Golpe clássico de finalização no Jiu-Jitsu.",
     "steps": ["Atingir a montada", "Controlar quadril", "Avançar posição"]
   },
   {
@@ -14,7 +14,7 @@
     "belt": "branca",
     "image": "../../public/armlock.jpg",
     "video": "https://www.youtube.com/embed/yyyyy",
-    "description_pt": "Golpe clássico de finalização no Jiu-Jitsu.",
+    "description_pt": "Golpe clássico de finalização no Jiu-Jitsu. Golpe clássico de finalização no Jiu-Jitsu.",
     "steps": ["Segurar o braço", "Ajustar o quadril", "Finalizar"]
   },
   {

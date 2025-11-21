@@ -3,31 +3,70 @@ import data from "../data/moves.json";
 import { Link } from "react-router-dom";
 
 export default function Techniques() {
-  const user = JSON.parse(localStorage.getItem("user-bjj")) || { faixa: "branca" };
+  const user = JSON.parse(localStorage.getItem("user-bjj")) || {
+    faixa: "branca",
+  };
   const beltOrder = ["branca", "azul", "roxa", "marrom", "preta"];
 
-  const techniques = data.length
+  const techniques = data.length;
 
   return (
     <div className="font-display p-5">
-      <h1 className="font-semibold mt-3 text-2xl text-left">Arsenal de Técnicas</h1>
+      <h1 className="font-semibold mt-3 text-2xl text-left">
+        Arsenal de Técnicas
+      </h1>
       <h3 className="mb-8 text-gray-600">
-          Explore nossa coleção completa de técnicas de Jiu-Jitsu Brasileiro.
-        </h3>
-        <h6 className="mb-2 text-xs text-gray-600">Mostrando {techniques} técnicas</h6>
-      <div className="flex flex-wrap justify-center gap-8">
+        Explore nossa coleção completa de técnicas de Jiu-Jitsu Brasileiro.
+      </h3>
+      <h6 className="mb-2 text-xs text-gray-600">
+        Mostrando {techniques} técnicas
+      </h6>
+
+      {/* AQUI ENTRA O NOVO GRID DOS CARDS */}
+      <div className="flex flex-wrap justify-center mt-1 gap-10 px-2">
         {data.map((m) => {
-          const locked = beltOrder.indexOf(user.faixa) < beltOrder.indexOf(m.belt);
+          const locked =
+            beltOrder.indexOf(user.faixa) < beltOrder.indexOf(m.belt);
+
           return (
-            <div key={m.id} className={`flex border-2 flex-col items-left pt-5 mb-8 mt-auto rounded-xl border-[#C6C6C6] card ${locked ? "locked" : ""}`}>
-              <img src={m.image} alt={m.name_pt} className="w-72 h-50 object-fill rounded-t-xl mb-3" />
-              <h3 className="pt-4 px-5 font-bold text-xl">{m.name_pt}</h3>
-              <p className="pt-1 px-5 text-gray-500 text-xs">{m.description_pt}</p>
-              {locked ? (
-                <p className="py-2 px-15 mt-5 text-center text-white font-semibold border rounded-xl bg-[#777777]">🔒Bloqueado</p>
-              ) : (
-                <Link className="py-2 px-17 mt-5 text-center text-white font-semibold border rounded-xl bg-[#d11e1eff]" to={`/techniques/${m.id}`}>Ver Técnica</Link>
-              )}
+            <div
+              key={m.id}
+              className={`max-w-[330px] w-full bg-white/80 backdrop-blur-md border border-gray-200 shadow-md rounded-2xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${
+                locked ? "opacity-70" : ""
+              }`}
+            >
+              {/* Imagem */}
+              <div className="h-44 w-full overflow-hidden">
+                <img
+                  src={m.image}
+                  alt={m.name_pt}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+
+              <div className="p-5">
+                <h3 className="font-bold text-xl mb-1">{m.name_pt}</h3>
+
+                <p className="text-gray-500 text-sm line-clamp-2 mb-4">
+                  {m.description_pt}
+                </p>
+
+                {locked ? (
+                  <button
+                    disabled
+                    className="w-full py-2 bg-gray-400 text-white font-semibold rounded-xl cursor-not-allowed"
+                  >
+                    🔒 Bloqueado
+                  </button>
+                ) : (
+                  <Link
+                    to={`/techniques/${m.id}`}
+                    className="w-full block text-center py-2 bg-red-600 hover:bg-red-700 transition-all text-white font-semibold rounded-xl"
+                  >
+                    Ver Técnica
+                  </Link>
+                )}
+              </div>
             </div>
           );
         })}
